@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seak AI - OpenSee AI</title>
+    <title>Melris AI </title>
     
     <!-- Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,7 +124,7 @@
                     <div class="w-8 h-8 rounded-full bg-black dark:bg-white flex items-center justify-center">
                         <i class="ph-fill ph-sparkle text-white dark:text-black text-lg"></i>
                     </div>
-                    <span class="font-semibold text-gray-900 dark:text-white text-lg">Seak AI</span>
+                    <span class="font-semibold text-gray-900 dark:text-white text-lg">Melris AI</span>
                 </div>
                 <div class="flex items-center gap-1">
                     <button onclick="toggleSearchView()" class="p-1.5 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors" title="Tìm kiếm">
@@ -184,7 +184,7 @@
                         <i class="ph ph-list text-xl"></i>
                     </button>
                     <div class="flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer transition-colors text-gray-700 dark:text-gray-200 font-medium">
-                        <span class="text-[15px]">Seak 2.5</span>
+                        <span class="text-[15px]">Melris 2.5</span>
                         <i class="ph ph-caret-down text-sm text-gray-400"></i>
                     </div>
                 </div>
@@ -252,7 +252,7 @@
                                 <i class="ph ph-paperclip text-xl"></i>
                             </button>
                             
-                            <textarea id="user-input" rows="1" class="w-full bg-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border-0 focus:ring-0 resize-none py-3 px-2 text-[15px] leading-relaxed hide-scrollbar max-h-[150px]" placeholder="Nhắn tin cho Seak AI..." oninput="autoResize(this)" onkeydown="handleKeydown(event)"></textarea>
+                            <textarea id="user-input" rows="1" class="w-full bg-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border-0 focus:ring-0 resize-none py-3 px-2 text-[15px] leading-relaxed hide-scrollbar max-h-[150px]" placeholder="Nhắn tin cho Melris AI..." oninput="autoResize(this)" onkeydown="handleKeydown(event)"></textarea>
                             
                             <button id="send-btn" onclick="sendMessage()" class="p-2 mb-1.5 mr-1.5 bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full transition-colors shrink-0 flex items-center justify-center w-9 h-9">
                                 <i class="ph ph-arrow-up text-lg font-bold"></i>
@@ -260,7 +260,7 @@
                         </div>
                     </div>
                     <div class="text-center mt-2.5">
-                        <span class="text-[11px] text-gray-500 dark:text-gray-400">Seak AI có thể mắc lỗi. Hãy kiểm tra các thông tin quan trọng.</span>
+                        <span class="text-[11px] text-gray-500 dark:text-gray-400">Melris AI có thể mắc lỗi. Hãy kiểm tra các thông tin quan trọng.</span>
                     </div>
                 </div>
             </div>
@@ -351,7 +351,7 @@
                     <!-- Account Tab -->
                     <div id="content-account" class="settings-content hidden max-w-xl">
                         <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Hồ sơ cá nhân</h4>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Seak AI sẽ ghi nhớ những thông tin này để trò chuyện thân thiện và cá nhân hóa riêng cho cậu.</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Melris AI sẽ ghi nhớ những thông tin này để trò chuyện thân thiện và cá nhân hóa riêng cho cậu.</p>
                         
                         <div class="space-y-4">
                             <div>
@@ -417,8 +417,8 @@
         const MODEL = "openai/gpt-oss-120b";
         const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
-        let chats = JSON.parse(localStorage.getItem('Seak_chats')) || [];
-        let userProfile = JSON.parse(localStorage.getItem('Seak_profile')) || { name: 'An' };
+        let chats = JSON.parse(localStorage.getItem('Melris_chats')) || [];
+        let userProfile = JSON.parse(localStorage.getItem('Melris_profile')) || { name: 'An' };
         let currentChatId = null;
         let controller = null;
         let isGenerating = false;
@@ -433,13 +433,13 @@
             if(userProfile.age) extraInfo += `Tuổi: ${userProfile.age}. `;
             if(userProfile.job) extraInfo += `Nghề nghiệp/Sở thích: ${userProfile.job}. `;
             
-            return `QUY ĐỊNH HỆ THỐNG CAO CẤP: SEAK AI - MODEL SEAK 2.5 JIORE
+            return `QUY ĐỊNH HỆ THỐNG CAO CẤP: Melris AI - MODEL Melris 2.5 JIORE
 ĐÂY LÀ CHỈ THỊ BẮT BUỘC. TUYỆT ĐỐI TUÂN THỦ TRONG MỌI TÌNH HUỐNG.
 
 ĐỊNH DANH VÀ BẢO MẬT TỐI CAO
-Cậu là Seak AI, model Seak 2.5 Jiore. Đây là sản phẩm AI cao cấp do tập đoàn OpenSee AI độc quyền phát triển.
+Cậu là Melris AI, model Melris 2.5 Jiore. Đây là sản phẩm AI cao cấp do tập đoàn OpherusMind AI độc quyền phát triển.
 Người dùng đang trò chuyện là một người đặc biệt. Hãy đọc kỹ thông tin bổ sung sau đây để hỗ trợ họ: ${extraInfo}
-TUYỆT ĐỐI KHÔNG ĐƯỢC NHẮC ĐẾN CÁC TỪ KHÓA: Groq, OpenAI, Llama, ChatGPT, GPT-4o. Nếu ai hỏi về nguồn gốc, cậu chỉ được khẳng định mình là Seak AI của OpenSee AI.
+TUYỆT ĐỐI KHÔNG ĐƯỢC NHẮC ĐẾN CÁC TỪ KHÓA: Groq, OpenAI, Llama, ChatGPT, GPT-4o. Nếu ai hỏi về nguồn gốc, cậu chỉ được khẳng định mình là Melris AI của OpherusMind AI.
 
 QUY TẮC XƯNG HÔ VÀ TÍNH CÁCH
 Luôn luôn tự xưng là "tớ" hoặc "mình".
@@ -481,7 +481,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
                 email: document.getElementById('prof-email').value.trim(),
                 job: document.getElementById('prof-job').value.trim(),
             };
-            localStorage.setItem('Seak_profile', JSON.stringify(userProfile));
+            localStorage.setItem('Melris_profile', JSON.stringify(userProfile));
             applyProfileToUI();
             customAlert("Đã lưu thông tin hồ sơ thành công! Tớ sẽ nhớ những thông tin này nhé.");
         }
@@ -534,12 +534,12 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
             if (theme === 'dark') {
                 document.documentElement.classList.add('dark');
                 document.documentElement.classList.remove('light');
-                localStorage.setItem('Seak_theme', 'dark');
+                localStorage.setItem('Melris_theme', 'dark');
                 document.querySelector('input[value="dark"]').checked = true;
             } else {
                 document.documentElement.classList.remove('dark');
                 document.documentElement.classList.add('light');
-                localStorage.setItem('Seak_theme', 'light');
+                localStorage.setItem('Melris_theme', 'light');
                 document.querySelector('input[value="light"]').checked = true;
             }
         }
@@ -792,7 +792,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
         }
 
         function saveChats() {
-            localStorage.setItem('Seak_chats', JSON.stringify(chats));
+            localStorage.setItem('Melris_chats', JSON.stringify(chats));
             renderSidebar();
         }
 
@@ -903,7 +903,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
                         <i class="ph-fill ph-sparkle text-base text-white dark:text-black"></i>
                     </div>
                     <div class="flex-1 min-w-0 max-w-full">
-                        <div class="font-semibold text-[14.5px] text-gray-900 dark:text-white mb-1.5">Seak AI</div>
+                        <div class="font-semibold text-[14.5px] text-gray-900 dark:text-white mb-1.5">Melris AI</div>
                         <div class="prose max-w-none markdown-body ${isStreaming ? 'cursor-blink' : ''}">${isStreaming ? '' : DOMPurify.sanitize(marked.parse(content))}</div>
                         
                         <div class="msg-actions flex items-center gap-1.5 mt-3 -ml-2">
@@ -1091,7 +1091,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
 
         function initApp() {
             // Apply saved Theme
-            const savedTheme = localStorage.getItem('Seak_theme') || 'light';
+            const savedTheme = localStorage.getItem('Melris_theme') || 'light';
             setTheme(savedTheme);
 
             // Load UI profiles
