@@ -122,7 +122,7 @@
             <div class="flex items-center justify-between px-2 pt-1">
                 <div class="flex items-center gap-2">
                     <div class="w-8 h-8 rounded-full bg-black dark:bg-white flex items-center justify-center">
-                        <i class="ph-fill ph-open-ai-logo text-white dark:text-black text-lg"></i>
+                        <i class="ph-regular ph-open-ai-logo text-white dark:text-black text-lg"></i>
                     </div>
                     <span class="font-semibold text-gray-900 dark:text-white text-lg">Melris AI</span>
                 </div>
@@ -198,7 +198,7 @@
             <div id="chat-container" class="flex-1 overflow-y-auto scroll-smooth pb-32">
                 <div id="welcome-screen" class="h-full flex flex-col items-center justify-center p-6 text-center max-w-3xl mx-auto">
                     <div class="w-14 h-14 rounded-2xl bg-black dark:bg-white flex items-center justify-center mb-6 shadow-xl shadow-black/10 dark:shadow-white/10">
-                        <i class="ph-fill ph-open-ai-logo text-3xl text-white dark:text-black"></i>
+                        <i class="ph-regular ph-open-ai-logo text-3xl text-white dark:text-black"></i>
                     </div>
                     <h1 class="text-2xl font-semibold text-gray-900 dark:text-white mb-8">Tớ có thể giúp gì cho cậu hôm nay?</h1>
                     
@@ -234,7 +234,7 @@
                     
                     <div id="stop-btn-container" class="absolute -top-12 left-1/2 transform -translate-x-1/2 hidden">
                         <button onclick="stopGeneration()" class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-[#262626] border border-gray-300 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 shadow-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-                            <i class="ph-fill ph-stop text-base"></i>
+                            <i class="ph-regular ph-stop text-base"></i>
                             Dừng tạo
                         </button>
                     </div>
@@ -699,7 +699,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
             previewContainer.innerHTML = `
                 <div class="relative bg-white dark:bg-[#262626] border border-gray-200 dark:border-gray-700 rounded-xl p-2.5 flex items-center gap-3 shadow-sm max-w-[260px]">
                     <div class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-500 shrink-0">
-                        <i class="ph-fill ph-file-text text-[18px]"></i>
+                        <i class="ph-regular ph-file-text text-[18px]"></i>
                     </div>
                     <div class="flex-1 min-w-0 pr-3">
                         <p class="text-[13px] font-medium text-gray-900 dark:text-white truncate">${file.name}</p>
@@ -900,7 +900,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
             } else {
                 html = `
                     <div class="w-8 h-8 rounded-full bg-black dark:bg-white flex items-center justify-center shrink-0 mt-0.5 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <i class="ph-fill ph-open-ai-logo text-base text-white dark:text-black"></i>
+                        <i class="ph-regular ph-open-ai-logo text-base text-white dark:text-black"></i>
                     </div>
                     <div class="flex-1 min-w-0 max-w-full">
                         <div class="font-semibold text-[14.5px] text-gray-900 dark:text-white mb-1.5">Melris AI</div>
@@ -1000,7 +1000,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
             
             // Xử lý gửi nội dung nếu có file đính kèm
             if (attachedFile) {
-                displayContent = `<div class="flex items-center gap-2 px-3 py-2 bg-gray-200 dark:bg-gray-800 rounded-lg w-fit mb-2 text-sm text-gray-900 dark:text-gray-100 shadow-sm border border-gray-300 dark:border-gray-700"><i class="ph-fill ph-file-text text-blue-500 text-lg"></i><span class="font-medium truncate max-w-[200px]">${attachedFile.name}</span></div>${text}`;
+                displayContent = `<div class="flex items-center gap-2 px-3 py-2 bg-gray-200 dark:bg-gray-800 rounded-lg w-fit mb-2 text-sm text-gray-900 dark:text-gray-100 shadow-sm border border-gray-300 dark:border-gray-700"><i class="ph-regular ph-file-text text-blue-500 text-lg"></i><span class="font-medium truncate max-w-[200px]">${attachedFile.name}</span></div>${text}`;
                 finalContent = `[Đã đính kèm tệp: ${attachedFile.name}]\n${text}`;
                 removeAttachedFile();
             }
