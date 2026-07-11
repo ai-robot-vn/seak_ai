@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melris AI </title>
     
-    <!-- Fonts: Questrial -->
+    <!-- Fonts: DM Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -20,7 +20,7 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Questrial', 'sans-serif'] },
+                    fontFamily: { sans: ['DM Sans', 'sans-serif'] },
                     colors: {
                         gray: {
                             50: '#f9f9f9',
@@ -92,7 +92,7 @@
         .dark .prose code { background-color: #262626; color: #fca5a5; }
         .dark .prose pre code { color: inherit; background-color: transparent; }
 
-        .copy-code-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.1); color: #ccc; border: none; font-size: 0.75rem; cursor: poQuestrial; display: flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 4px; transition: all 0.2s; font-family: 'Questrial', sans-serif;}
+        .copy-code-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.1); color: #ccc; border: none; font-size: 0.75rem; cursor: poDM Sans; display: flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 4px; transition: all 0.2s; font-family: 'DM Sans', sans-serif;}
         .copy-code-btn:hover { background: rgba(255,255,255,0.2); color: #fff; }
 
         .cursor-blink::after { content: '▋'; animation: blink 1s step-start infinite; color: #000; margin-left: 2px; }
@@ -136,7 +136,7 @@
                 </div>
             </div>
             
-            <button onclick="createNewChat()" class="flex items-center justify-between w-full px-3 py-2.5 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-xl text-sm font-medium transition-colors bg-transparent border-0 shadow-none cursor-poQuestrial">
+            <button onclick="createNewChat()" class="flex items-center justify-between w-full px-3 py-2.5 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-xl text-sm font-medium transition-colors bg-transparent border-0 shadow-none cursor-poDM Sans">
                 <div class="flex items-center gap-2">
                     <i class="ph ph-plus text-base"></i>
                     Đoạn chat mới
@@ -153,19 +153,19 @@
         </div>
 
         <div class="p-3 border-t border-gray-200 dark:border-gray-800 flex flex-col gap-1">
-            <div onclick="openSettings('activity')" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors cursor-poQuestrial text-gray-700 dark:text-gray-300">
+            <div onclick="openSettings('activity')" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors cursor-poDM Sans text-gray-700 dark:text-gray-300">
                 <div class="flex items-center gap-2">
                     <i class="ph ph-clock-counter-clockwise text-lg"></i>
                     <span class="text-sm font-medium">Hoạt động</span>
                 </div>
             </div>
-            <div onclick="openSettings('theme')" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors cursor-poQuestrial text-gray-700 dark:text-gray-300">
+            <div onclick="openSettings('theme')" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors cursor-poDM Sans text-gray-700 dark:text-gray-300">
                 <div class="flex items-center gap-2">
                     <i class="ph ph-gear text-lg"></i>
                     <span class="text-sm font-medium">Cài đặt</span>
                 </div>
             </div>
-            <div onclick="openSettings('account')" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors cursor-poQuestrial mt-1">
+            <div onclick="openSettings('account')" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors cursor-poDM Sans mt-1">
                 <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center text-sm font-semibold text-black dark:text-white shadow-sm user-avatar-text">A</div>
                 <div class="flex-1 min-w-0">
                     <p class="text-sm font-medium text-gray-900 dark:text-white truncate user-name-text">An</p>
@@ -183,7 +183,7 @@
                     <button class="md:hidden p-2 -ml-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-md" onclick="toggleSidebar()">
                         <i class="ph ph-list text-xl"></i>
                     </button>
-                    <div class="flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 cursor-poQuestrial transition-colors text-gray-700 dark:text-gray-200 font-medium">
+                    <div class="flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 cursor-poDM Sans transition-colors text-gray-700 dark:text-gray-200 font-medium">
                         <span class="text-[15px]">Melris 2.5</span>
                         <i class="ph ph-caret-down text-sm text-gray-400"></i>
                     </div>
@@ -313,7 +313,7 @@
                     <div id="content-theme" class="settings-content max-w-xl">
                         <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-6">Tùy chỉnh giao diện</h4>
                         <div class="flex flex-col gap-4">
-                            <label class="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-800 rounded-xl cursor-poQuestrial hover:bg-gray-50 dark:hover:bg-[#171717] transition-colors">
+                            <label class="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-800 rounded-xl cursor-poDM Sans hover:bg-gray-50 dark:hover:bg-[#171717] transition-colors">
                                 <div class="flex items-center gap-3">
                                     <i class="ph ph-sun text-2xl text-gray-500"></i>
                                     <div>
@@ -324,7 +324,7 @@
                                 <input type="radio" name="theme-radio" value="light" onchange="setTheme('light')" class="w-5 h-5 accent-black dark:accent-white">
                             </label>
                             
-                            <label class="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-800 rounded-xl cursor-poQuestrial hover:bg-gray-50 dark:hover:bg-[#171717] transition-colors">
+                            <label class="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-800 rounded-xl cursor-poDM Sans hover:bg-gray-50 dark:hover:bg-[#171717] transition-colors">
                                 <div class="flex items-center gap-3">
                                     <i class="ph ph-moon text-2xl text-gray-500"></i>
                                     <div>
@@ -621,7 +621,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
             } else {
                 filteredChats.forEach(chat => {
                     const div = document.createElement('div');
-                    div.className = "p-4 border border-gray-100 dark:border-gray-800 rounded-2xl hover:bg-gray-50 dark:hover:bg-[#171717] cursor-poQuestrial transition-colors flex items-center justify-between group";
+                    div.className = "p-4 border border-gray-100 dark:border-gray-800 rounded-2xl hover:bg-gray-50 dark:hover:bg-[#171717] cursor-poDM Sans transition-colors flex items-center justify-between group";
                     div.onclick = () => { loadChat(chat.id); closeSearchView(); };
                     
                     const messagePreview = chat.messages.filter(m => m.role === 'user').pop()?.content || "Cuộc trò chuyện mới";
@@ -648,7 +648,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
             
             chats.forEach(chat => {
                 const div = document.createElement('div');
-                div.className = "p-4 border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-[#171717] cursor-poQuestrial transition-colors";
+                div.className = "p-4 border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-[#171717] cursor-poDM Sans transition-colors";
                 div.onclick = () => { loadChat(chat.id); closeSettings(); };
                 
                 const date = new Date(chat.updatedAt || parseInt(chat.id));
@@ -865,7 +865,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
                 const isActive = chat.id === currentChatId;
                 const div = document.createElement('div');
                 
-                div.className = `group flex items-center justify-between px-3 py-2.5 rounded-xl cursor-poQuestrial transition-colors ${isActive ? 'bg-gray-200 dark:bg-[#262626] text-gray-900 dark:text-white font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200/50 dark:hover:bg-[#262626]/40'}`;
+                div.className = `group flex items-center justify-between px-3 py-2.5 rounded-xl cursor-poDM Sans transition-colors ${isActive ? 'bg-gray-200 dark:bg-[#262626] text-gray-900 dark:text-white font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200/50 dark:hover:bg-[#262626]/40'}`;
                 div.onclick = () => loadChat(chat.id);
                 
                 div.innerHTML = `
@@ -873,7 +873,7 @@ Trước khi gửi bất kỳ câu trả lời nào, cậu phải tự kiểm tr
                         <i class="ph ph-chat-circle text-base text-gray-400 dark:text-gray-500"></i>
                         <span class="text-[13px] truncate">${chat.title}</span>
                     </div>
-                    <button onclick="deleteChat('${chat.id}', event)" class="opacity-0 group-hover:opacity-100 p-1 hover:text-red-500 dark:hover:text-red-400 transition-colors bg-transparent border-0 cursor-poQuestrial">
+                    <button onclick="deleteChat('${chat.id}', event)" class="opacity-0 group-hover:opacity-100 p-1 hover:text-red-500 dark:hover:text-red-400 transition-colors bg-transparent border-0 cursor-poDM Sans">
                         <i class="ph ph-trash text-[15px]"></i>
                     </button>
                 `;
